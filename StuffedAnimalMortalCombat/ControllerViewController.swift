@@ -8,6 +8,26 @@
 
 import UIKit
 
+// Normal
+
+// - directional pad
+// - attack buttons
+// - health bar?
+// - points?
+// - energy bar?
+// - join and leave game buttons?
+
+// Hard
+
+// - skin selector? (maybe new view controller)
+// - way to set your name?
+// - way to approve invite ( alert view controller)
+
+
+// Nightmare Mode
+
+// - start connecting buttons to actions
+
 class ControllerViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -21,15 +41,22 @@ class ControllerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func joinGameButton(sender: UIButton) {
+        
+        let myPeerID = Connector.defaultConnector().session?.myPeerID
+        Connector.defaultConnector().session?.nearbyConnectionDataForPeer(myPeerID, withCompletionHandler: { (NSData, NSError) -> Void in
+            
+            Connector.defaultConnector().session?.connectPeer(myPeerID, withNearbyConnectionData: NSData!)
+        })
+        
     }
-    */
+    
+    
+    @IBAction func leaveGameButton(sender: UIButton) {
+        
+    //  Connector.defaultConnector().session?.cancelConnectPeer
+        Connector.defaultConnector().session?.disconnect()
+    }
+
 
 }

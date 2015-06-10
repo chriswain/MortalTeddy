@@ -74,6 +74,8 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
         println("invitation from " + peerID.displayName)
         
         invitationHandler(true,session)
+    
+
     }
     
    
