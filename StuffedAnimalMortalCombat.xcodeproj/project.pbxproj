@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E83EE1651B2873BD0032F86F /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83EE1641B2873BD0032F86F /* Avatar.swift */; };
 		E89C52F31B272C2C0068A661 /* ipadMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89C52F21B272C2C0068A661 /* ipadMain.storyboard */; };
 		E89C52F61B272C450068A661 /* ipodMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89C52F41B272C450068A661 /* ipodMain.storyboard */; };
 		E89C52FC1B273B620068A661 /* ControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89C52FB1B273B620068A661 /* ControllerViewController.swift */; };
 		E89C52FE1B273C7A0068A661 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89C52FD1B273C7A0068A661 /* Connector.swift */; };
+		E8A7762F1B2917CE00DDD674 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A7762E1B2917CE00DDD674 /* CircleView.swift */; };
+		E8DB82011B28DD5300925AC9 /* TriangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DB82001B28DD5300925AC9 /* TriangleButton.swift */; };
 		E8F21F9E1B2729C20073DA29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F21F9D1B2729C20073DA29 /* AppDelegate.swift */; };
 		E8F21FA01B2729C20073DA29 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8F21F9F1B2729C20073DA29 /* GameScene.sks */; };
 		E8F21FA21B2729C20073DA29 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F21FA11B2729C20073DA29 /* GameScene.swift */; };
@@ -31,10 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E83EE1641B2873BD0032F86F /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		E89C52F21B272C2C0068A661 /* ipadMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ipadMain.storyboard; sourceTree = "<group>"; };
 		E89C52F51B272C450068A661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ipodMain.storyboard; sourceTree = "<group>"; };
 		E89C52FB1B273B620068A661 /* ControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerViewController.swift; sourceTree = "<group>"; };
 		E89C52FD1B273C7A0068A661 /* Connector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
+		E8A7762E1B2917CE00DDD674 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		E8DB82001B28DD5300925AC9 /* TriangleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleButton.swift; sourceTree = "<group>"; };
 		E8F21F981B2729C20073DA29 /* StuffedAnimalMortalCombat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StuffedAnimalMortalCombat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F21F9C1B2729C20073DA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8F21F9D1B2729C20073DA29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E83EE1631B2873880032F86F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E83EE1641B2873BD0032F86F /* Avatar.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		E89C52FA1B273B330068A661 /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,15 @@
 				E89C52FD1B273C7A0068A661 /* Connector.swift */,
 			);
 			name = Random;
+			sourceTree = "<group>";
+		};
+		E8DB81FF1B28DB4D00925AC9 /* IBDesignables */ = {
+			isa = PBXGroup;
+			children = (
+				E8DB82001B28DD5300925AC9 /* TriangleButton.swift */,
+				E8A7762E1B2917CE00DDD674 /* CircleView.swift */,
+			);
+			name = IBDesignables;
 			sourceTree = "<group>";
 		};
 		E8F21F8F1B2729C20073DA29 = {
@@ -110,6 +133,8 @@
 				E89C52FA1B273B330068A661 /* Game */,
 				E89C52F41B272C450068A661 /* ipodMain.storyboard */,
 				E89C52FB1B273B620068A661 /* ControllerViewController.swift */,
+				E8DB81FF1B28DB4D00925AC9 /* IBDesignables */,
+				E83EE1631B2873880032F86F /* Controller */,
 				E8F21F9B1B2729C20073DA29 /* Supporting Files */,
 			);
 			path = StuffedAnimalMortalCombat;
@@ -245,10 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8A7762F1B2917CE00DDD674 /* CircleView.swift in Sources */,
+				E83EE1651B2873BD0032F86F /* Avatar.swift in Sources */,
 				E89C52FC1B273B620068A661 /* ControllerViewController.swift in Sources */,
 				E8F21FA21B2729C20073DA29 /* GameScene.swift in Sources */,
 				E8F21FA41B2729C20073DA29 /* GameViewController.swift in Sources */,
 				E89C52FE1B273C7A0068A661 /* Connector.swift in Sources */,
+				E8DB82011B28DD5300925AC9 /* TriangleButton.swift in Sources */,
 				E8F21F9E1B2729C20073DA29 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
