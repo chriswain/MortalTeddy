@@ -22,5 +22,61 @@
             </objects>
             <point key="canvasLocation" x="361" y="389"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="3P4-UI-oRm">
+            <objects>
+                <viewController storyboardIdentifier="playerStats" id="skR-Bc-9tI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v9L-Nn-Ycb"/>
+                        <viewControllerLayoutGuide type="bottom" id="OzM-qt-oYB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lkh-r3-AmL">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uft-wq-PSK" customClass="PointBarView" customModule="StuffedAnimalMortalCombat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="10"/>
+                                <color key="backgroundColor" red="0.19749078149999999" green="0.88840693240000002" blue="0.88931047919999995" alpha="1" colorSpace="deviceRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fullColor">
+                                        <color key="value" red="0.34306251721925396" green="0.3450782819107352" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
+                                        <color key="value" red="1" green="0.15086749199999999" blue="0.1030501202" alpha="1" colorSpace="deviceRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="points">
+                                        <real key="value" value="121"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0p6-hc-9yJ">
+                                <rect key="frame" x="0.0" y="15" width="200" height="10"/>
+                                <color key="backgroundColor" red="0.19749078149999999" green="0.88840693240000002" blue="0.88931047919999995" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Monkey D Ase" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s60-2j-gEC">
+                                <rect key="frame" x="0.0" y="36" width="130" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7M8-Xa-9DD">
+                                <rect key="frame" x="140" y="31" width="60" height="25"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tGf-DD-OOC">
+                                <rect key="frame" x="0.0" y="65" width="200" height="235"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="003-Nu-jhO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="342"/>
+        </scene>
     </scenes>
 </document>

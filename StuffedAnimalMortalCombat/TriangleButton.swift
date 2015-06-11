@@ -16,15 +16,25 @@ import UIKit
     @IBInspectable var degrees: Double = 360
     @IBInspectable var newOriginX: CGFloat = 0
     @IBInspectable var newOriginY: CGFloat = 0
-
+    @IBInspectable var cp1x: CGFloat = 10
+    @IBInspectable var cp1y: CGFloat = 10
+    @IBInspectable var cp2x: CGFloat = 30
+    @IBInspectable var cp2y: CGFloat = 30
+    @IBInspectable var pointX: CGFloat = 0
+    @IBInspectable var pointY: CGFloat = 50
+    @IBInspectable var linePointX: CGFloat = 30
+    @IBInspectable var linePointY: CGFloat = 50
+    @IBInspectable var movePointX: CGFloat = 0
+    @IBInspectable var movePointY: CGFloat = 0
+    
+    
+    
     
     override func drawRect(rect: CGRect) {
         
         let context = UIGraphicsGetCurrentContext()
         
         fillColor.setFill()
-
- //     CGContextSetBlendMode(context, kCGBlendModeClear)
         
         let angle = CGFloat(DegreesToRadians(degrees))
         
@@ -34,16 +44,14 @@ import UIKit
         
         CGContextSetBlendMode(context, kCGBlendModeNormal)
 
-        CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMinY(rect))
-        CGContextAddCurveToPoint(context, (CGRectGetMidX(rect) * 0.5), (CGRectGetMidY(rect) * 0.5), (CGRectGetMidX(rect) * 0.5), (CGRectGetMidY(rect) * 1.5), CGRectGetMinX(rect), CGRectGetMaxY(rect))
- 
-        CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMidY(rect))
-        
+    //  CGContextMoveToPoint(context, CGRectGetMinX(rect), CGRectGetMinY(rect))
+        CGContextMoveToPoint(context, movePointX, movePointY)
+    //  CGContextAddCurveToPoint(context, (CGRectGetMidX(rect) * 0.5), (CGRectGetMidY(rect) * 0.5), (CGRectGetMidX(rect) * 0.5), (CGRectGetMidY(rect) * 1.5), CGRectGetMinX(rect), CGRectGetMaxY(rect))
+        CGContextAddCurveToPoint(context, cp1x, cp1y, cp2x, cp2y, pointX, pointY)
+   //   CGContextAddLineToPoint(context, CGRectGetMaxX(rect), CGRectGetMidY(rect))
+        CGContextAddLineToPoint(context, linePointX, linePointY)
        
        
-  //      CGContextClosePath(context)
-        
-   //     strokeColor.setStroke()
         CGContextFillPath(context)
         
        

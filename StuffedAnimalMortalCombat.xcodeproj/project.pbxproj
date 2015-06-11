@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E815BF581B29D15300FAAB34 /* PawButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E815BF571B29D15300FAAB34 /* PawButton.swift */; };
+		E815BF5A1B29D9BA00FAAB34 /* MoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E815BF591B29D9BA00FAAB34 /* MoveButton.swift */; };
+		E815BF5C1B29EC4700FAAB34 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E815BF5B1B29EC4700FAAB34 /* Functions.swift */; };
+		E815BF5E1B2A2CEC00FAAB34 /* PointBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E815BF5D1B2A2CEC00FAAB34 /* PointBarView.swift */; };
 		E83EE1651B2873BD0032F86F /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83EE1641B2873BD0032F86F /* Avatar.swift */; };
 		E89C52F31B272C2C0068A661 /* ipadMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89C52F21B272C2C0068A661 /* ipadMain.storyboard */; };
 		E89C52F61B272C450068A661 /* ipodMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89C52F41B272C450068A661 /* ipodMain.storyboard */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E815BF571B29D15300FAAB34 /* PawButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PawButton.swift; sourceTree = "<group>"; };
+		E815BF591B29D9BA00FAAB34 /* MoveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveButton.swift; sourceTree = "<group>"; };
+		E815BF5B1B29EC4700FAAB34 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		E815BF5D1B2A2CEC00FAAB34 /* PointBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointBarView.swift; sourceTree = "<group>"; };
 		E83EE1641B2873BD0032F86F /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		E89C52F21B272C2C0068A661 /* ipadMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ipadMain.storyboard; sourceTree = "<group>"; };
 		E89C52F51B272C450068A661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ipodMain.storyboard; sourceTree = "<group>"; };
@@ -76,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				E83EE1641B2873BD0032F86F /* Avatar.swift */,
+				E815BF571B29D15300FAAB34 /* PawButton.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -85,6 +94,7 @@
 			children = (
 				E8F21FA11B2729C20073DA29 /* GameScene.swift */,
 				E8F21F9F1B2729C20073DA29 /* GameScene.sks */,
+				E815BF5D1B2A2CEC00FAAB34 /* PointBarView.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -102,6 +112,7 @@
 			children = (
 				E8DB82001B28DD5300925AC9 /* TriangleButton.swift */,
 				E8A7762E1B2917CE00DDD674 /* CircleView.swift */,
+				E815BF591B29D9BA00FAAB34 /* MoveButton.swift */,
 			);
 			name = IBDesignables;
 			sourceTree = "<group>";
@@ -147,6 +158,7 @@
 				E8F21F9C1B2729C20073DA29 /* Info.plist */,
 				E8F21F9D1B2729C20073DA29 /* AppDelegate.swift */,
 				E8F21FAA1B2729C20073DA29 /* LaunchScreen.xib */,
+				E815BF5B1B29EC4700FAAB34 /* Functions.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -270,11 +282,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E815BF5A1B29D9BA00FAAB34 /* MoveButton.swift in Sources */,
 				E8A7762F1B2917CE00DDD674 /* CircleView.swift in Sources */,
 				E83EE1651B2873BD0032F86F /* Avatar.swift in Sources */,
+				E815BF5E1B2A2CEC00FAAB34 /* PointBarView.swift in Sources */,
 				E89C52FC1B273B620068A661 /* ControllerViewController.swift in Sources */,
+				E815BF5C1B29EC4700FAAB34 /* Functions.swift in Sources */,
 				E8F21FA21B2729C20073DA29 /* GameScene.swift in Sources */,
 				E8F21FA41B2729C20073DA29 /* GameViewController.swift in Sources */,
+				E815BF581B29D15300FAAB34 /* PawButton.swift in Sources */,
 				E89C52FE1B273C7A0068A661 /* Connector.swift in Sources */,
 				E8DB82011B28DD5300925AC9 /* TriangleButton.swift in Sources */,
 				E8F21F9E1B2729C20073DA29 /* AppDelegate.swift in Sources */,

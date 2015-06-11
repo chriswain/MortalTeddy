@@ -12,7 +12,8 @@ class ControllerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        Connector.defaultConnector().controller = self
         Connector.defaultConnector().startAdvertising()
     }
 
