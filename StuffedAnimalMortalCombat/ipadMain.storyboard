@@ -30,45 +30,114 @@
                         <viewControllerLayoutGuide type="top" id="v9L-Nn-Ycb"/>
                         <viewControllerLayoutGuide type="bottom" id="OzM-qt-oYB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lkh-r3-AmL">
+                    <view key="view" contentMode="scaleToFill" id="lkh-r3-AmL" customClass="PlayerStatsView" customModule="StuffedAnimalMortalCombat" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uft-wq-PSK" customClass="PointBarView" customModule="StuffedAnimalMortalCombat" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uft-wq-PSK" customClass="PointBarView" customModule="StuffedAnimalMortalCombat" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="10"/>
-                                <color key="backgroundColor" red="0.19749078149999999" green="0.88840693240000002" blue="0.88931047919999995" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="QuN-P4-QeV"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fullColor">
                                         <color key="value" red="0.34306251721925396" green="0.3450782819107352" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
-                                        <color key="value" red="1" green="0.15086749199999999" blue="0.1030501202" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="value" red="0.58232994283577066" green="0.70065551312497576" blue="0.98623949289321899" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="points">
-                                        <real key="value" value="121"/>
+                                        <real key="value" value="87"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0p6-hc-9yJ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0p6-hc-9yJ" customClass="PointBarView" customModule="StuffedAnimalMortalCombat" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="15" width="200" height="10"/>
-                                <color key="backgroundColor" red="0.19749078149999999" green="0.88840693240000002" blue="0.88931047919999995" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="HCv-2v-udg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fullColor">
+                                        <color key="value" red="0.26964655323869174" green="0.95829451084136963" blue="0.078577686408549952" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
+                                        <color key="value" red="0.83493920606690064" green="0.95829451084136963" blue="0.35659037129029292" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="points">
+                                        <real key="value" value="91"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Monkey D Ase" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s60-2j-gEC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Monkey D Ase" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s60-2j-gEC">
                                 <rect key="frame" x="0.0" y="36" width="130" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Awc-C9-5Xe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7M8-Xa-9DD">
-                                <rect key="frame" x="140" y="31" width="60" height="25"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7M8-Xa-9DD" customClass="StatsLivesView" customModule="StuffedAnimalMortalCombat" customModuleProvider="target">
+                                <rect key="frame" x="130" y="30" width="70" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="vgB-h5-Yz3"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tGf-DD-OOC">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGf-DD-OOC" customClass="StatsKillsView" customModule="StuffedAnimalMortalCombat" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="65" width="200" height="235"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="killsPerLine">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.1764705882" green="0.82745098039999998" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="killCount">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s60-2j-gEC" firstAttribute="top" secondItem="0p6-hc-9yJ" secondAttribute="bottom" constant="11" id="8yd-WA-eU0"/>
+                            <constraint firstItem="uft-wq-PSK" firstAttribute="leading" secondItem="lkh-r3-AmL" secondAttribute="leading" id="AUq-Xn-SsT"/>
+                            <constraint firstItem="7M8-Xa-9DD" firstAttribute="leading" secondItem="s60-2j-gEC" secondAttribute="trailing" id="B6z-mg-dor"/>
+                            <constraint firstItem="tGf-DD-OOC" firstAttribute="top" secondItem="s60-2j-gEC" secondAttribute="bottom" constant="9" id="BDf-W2-7Ei"/>
+                            <constraint firstAttribute="trailing" secondItem="uft-wq-PSK" secondAttribute="trailing" id="Goh-gs-RsK"/>
+                            <constraint firstAttribute="trailing" secondItem="7M8-Xa-9DD" secondAttribute="trailing" id="GxR-NU-BbR"/>
+                            <constraint firstItem="s60-2j-gEC" firstAttribute="leading" secondItem="lkh-r3-AmL" secondAttribute="leading" id="PwQ-fj-VVs"/>
+                            <constraint firstItem="0p6-hc-9yJ" firstAttribute="top" secondItem="uft-wq-PSK" secondAttribute="bottom" constant="5" id="RXX-1X-l9R"/>
+                            <constraint firstItem="7M8-Xa-9DD" firstAttribute="top" secondItem="0p6-hc-9yJ" secondAttribute="bottom" constant="5" id="UUH-TF-YHq"/>
+                            <constraint firstItem="OzM-qt-oYB" firstAttribute="top" secondItem="tGf-DD-OOC" secondAttribute="bottom" id="enK-a5-Hp5"/>
+                            <constraint firstItem="0p6-hc-9yJ" firstAttribute="leading" secondItem="lkh-r3-AmL" secondAttribute="leading" id="pUz-KM-3Y1"/>
+                            <constraint firstAttribute="bottom" secondItem="tGf-DD-OOC" secondAttribute="bottom" id="pjJ-O9-nD0"/>
+                            <constraint firstAttribute="trailing" secondItem="0p6-hc-9yJ" secondAttribute="trailing" id="tIN-e1-JoY"/>
+                            <constraint firstItem="uft-wq-PSK" firstAttribute="top" secondItem="v9L-Nn-Ycb" secondAttribute="bottom" id="tUv-hc-zSA"/>
+                            <constraint firstItem="tGf-DD-OOC" firstAttribute="leading" secondItem="lkh-r3-AmL" secondAttribute="leading" id="ubN-F0-jF0"/>
+                            <constraint firstItem="uft-wq-PSK" firstAttribute="top" secondItem="lkh-r3-AmL" secondAttribute="top" id="ud1-7s-YZ4"/>
+                            <constraint firstAttribute="trailing" secondItem="tGf-DD-OOC" secondAttribute="trailing" id="xn8-Yb-e9W"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tUv-hc-zSA"/>
+                                <exclude reference="enK-a5-Hp5"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outlet property="energyBar" destination="0p6-hc-9yJ" id="DfM-YE-C0U"/>
+                            <outlet property="healthBar" destination="uft-wq-PSK" id="bbY-vj-ccM"/>
+                            <outlet property="playerName" destination="s60-2j-gEC" id="Uqf-GI-fFw"/>
+                            <outlet property="statsKills" destination="tGf-DD-OOC" id="F86-VZ-Ran"/>
+                            <outlet property="statsLives" destination="7M8-Xa-9DD" id="cQU-vB-c6X"/>
+                        </connections>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

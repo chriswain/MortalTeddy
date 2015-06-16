@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let deviceType = UIDevice.currentDevice().model
         
         switch deviceType {
-        case "iPhone", "iPod Touch", "iPhone Simulator" :
+        case "iPhone", "iPod touch", "iPhone Simulator" :
         //    print("controller")
             let storyboard = UIStoryboard(name: "ipodMain", bundle: nil)
             window?.rootViewController = storyboard.instantiateInitialViewController() as? UIViewController

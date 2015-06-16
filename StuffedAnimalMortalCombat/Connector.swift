@@ -21,10 +21,15 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
     var advertiser: MCNearbyServiceAdvertiser? // iPhone
     var session: MCSession? // session of the connection
     var myPeerID: MCPeerID?
+    var worldID: MCPeerID?
+    var playersInfo: [String:AnyObject] = [:]
     var myInfo: [String:AnyObject] = [:]
-    
+        
+//        "color" : UIColor.redColor()
+//    ]
+//    
     var gameBoard: GameViewController?
-    
+    var gameScene: GameScene?
     var controller: ControllerViewController?
 
     
@@ -63,6 +68,8 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
         println("found " + peerID.displayName)
         println("found info \(info)")
         
+        playersInfo[peerID.displayName] = info
+        
         browser.invitePeer(peerID, toSession: session, withContext: nil, timeout: 30)   
         
     }
@@ -79,6 +86,8 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
         
         println("invitation from " + peerID.displayName)
         
+        worldID = peerID
+        
         invitationHandler(true,session)
     }
     
@@ -87,6 +96,8 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
     
     func session(session: MCSession!, didStartReceivingResourceWithName resourceName: String!, fromPeer peerID: MCPeerID!, withProgress progress: NSProgress!) {
         
+        
+        
     }
     
     func session(session: MCSession!, didReceiveStream stream: NSInputStream!, withName streamName: String!, fromPeer peerID: MCPeerID!) {
@@ -94,7 +105,7 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
     }
     
     func session(session: MCSession!, didReceiveData data: NSData!, fromPeer peerID: MCPeerID!) {
-        
+        decideActionWithData(data, andPeerID: peerID)
     }
     
     func session(session: MCSession!, didFinishReceivingResourceWithName resourceName: String!, fromPeer peerID: MCPeerID!, atURL localURL: NSURL!, withError error: NSError!) {
@@ -110,8 +121,51 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
         ]
         println("state \(stateArray[state.rawValue]) to " + peerID.displayName)
         
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            
+        
+        switch state {
+        
+        case .NotConnected :
+            
+            self.gameBoard?.playerJoined(peerID)
+        
+        case .Connecting :
+            
+            println("\(stateArray[state.rawValue]) to " + peerID.displayName)
+            
+        case .Connected :
+            
+            self.gameBoard?.playerJoined(peerID)
+            
+            
+            }
+        })
     }
     
+    ////////////////
     
+    //////////////// MARK: DATA HANDlING
+    
+    func sendDataToWorld(data: NSData) {
+        
+        if let worldID = worldID {
+            
+            session?.sendData(data, toPeers: [worldID], withMode: MCSessionSendDataMode.Reliable, error: nil)
+        }
+    }
+    
+    func decideActionWithData(data: NSData, andPeerID peerID: MCPeerID) {
+        
+        if let info = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as? [String:AnyObject] {
+            println(info)
+            
+            if let action = info["action"] as? String {
+                if action == "jump" {
+                    gameScene?.playerJump(peerID.displayName)
+                }
+            }
+        }
+    }
    
 }

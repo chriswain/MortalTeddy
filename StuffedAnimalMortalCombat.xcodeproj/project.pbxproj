@@ -16,6 +16,9 @@
 		E89C52F61B272C450068A661 /* ipodMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89C52F41B272C450068A661 /* ipodMain.storyboard */; };
 		E89C52FC1B273B620068A661 /* ControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89C52FB1B273B620068A661 /* ControllerViewController.swift */; };
 		E89C52FE1B273C7A0068A661 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89C52FD1B273C7A0068A661 /* Connector.swift */; };
+		E89E5E811B2B136000F59347 /* PlayerStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E5E801B2B136000F59347 /* PlayerStatsView.swift */; };
+		E89E5E831B2B149800F59347 /* StatsLivesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E5E821B2B149800F59347 /* StatsLivesView.swift */; };
+		E89E5E851B2B14A700F59347 /* StatsKillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89E5E841B2B14A700F59347 /* StatsKillsView.swift */; };
 		E8A7762F1B2917CE00DDD674 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A7762E1B2917CE00DDD674 /* CircleView.swift */; };
 		E8DB82011B28DD5300925AC9 /* TriangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DB82001B28DD5300925AC9 /* TriangleButton.swift */; };
 		E8F21F9E1B2729C20073DA29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F21F9D1B2729C20073DA29 /* AppDelegate.swift */; };
@@ -47,6 +50,9 @@
 		E89C52F51B272C450068A661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ipodMain.storyboard; sourceTree = "<group>"; };
 		E89C52FB1B273B620068A661 /* ControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerViewController.swift; sourceTree = "<group>"; };
 		E89C52FD1B273C7A0068A661 /* Connector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
+		E89E5E801B2B136000F59347 /* PlayerStatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerStatsView.swift; sourceTree = "<group>"; };
+		E89E5E821B2B149800F59347 /* StatsLivesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsLivesView.swift; sourceTree = "<group>"; };
+		E89E5E841B2B14A700F59347 /* StatsKillsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsKillsView.swift; sourceTree = "<group>"; };
 		E8A7762E1B2917CE00DDD674 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		E8DB82001B28DD5300925AC9 /* TriangleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleButton.swift; sourceTree = "<group>"; };
 		E8F21F981B2729C20073DA29 /* StuffedAnimalMortalCombat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StuffedAnimalMortalCombat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +101,9 @@
 				E8F21FA11B2729C20073DA29 /* GameScene.swift */,
 				E8F21F9F1B2729C20073DA29 /* GameScene.sks */,
 				E815BF5D1B2A2CEC00FAAB34 /* PointBarView.swift */,
+				E89E5E801B2B136000F59347 /* PlayerStatsView.swift */,
+				E89E5E821B2B149800F59347 /* StatsLivesView.swift */,
+				E89E5E841B2B14A700F59347 /* StatsKillsView.swift */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -282,9 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E89E5E851B2B14A700F59347 /* StatsKillsView.swift in Sources */,
+				E89E5E811B2B136000F59347 /* PlayerStatsView.swift in Sources */,
 				E815BF5A1B29D9BA00FAAB34 /* MoveButton.swift in Sources */,
 				E8A7762F1B2917CE00DDD674 /* CircleView.swift in Sources */,
 				E83EE1651B2873BD0032F86F /* Avatar.swift in Sources */,
+				E89E5E831B2B149800F59347 /* StatsLivesView.swift in Sources */,
 				E815BF5E1B2A2CEC00FAAB34 /* PointBarView.swift in Sources */,
 				E89C52FC1B273B620068A661 /* ControllerViewController.swift in Sources */,
 				E815BF5C1B29EC4700FAAB34 /* Functions.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import MultipeerConnectivity
 
 extension SKNode {
     class func unarchiveFromFile(file : String) -> SKNode? {
@@ -26,6 +27,8 @@ extension SKNode {
 }
 
 class GameViewController: UIViewController {
+    
+    var scene: GameScene?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +36,10 @@ class GameViewController: UIViewController {
         Connector.defaultConnector().gameBoard = self
 
         Connector.defaultConnector().startBrowsing()
+        
+        scene = GameScene.unarchiveFromFile("GameScene") as? GameScene
 
-        if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
+        if let scene = scene {
             // Configure the view.
             let skView = self.view as! SKView
             skView.showsFPS = true
@@ -50,16 +55,74 @@ class GameViewController: UIViewController {
         }
     }
     
-    func playerJoined() {
+    var playerViews: [PlayerStatsView] = []
+    
+    func playerJoined(peerID: MCPeerID) {
+        
+        if let playerVC = storyboard?.instantiateViewControllerWithIdentifier("playerStats") as? UIViewController {
+            
+            let playerView = playerVC.view as! PlayerStatsView
+            
+            playerView.playerName.text = peerID.displayName
+            
+            playerViews.append(playerView)
+            
+            scene?.playerJoined(peerID.displayName)
+            
+            
+        }
         
         // add stats area
         //add player sprite mode
+        layoutPlayerStats()
+    }
+    
+    func playerLeft(peerID: MCPeerID) {
+        
+        var foundPlayerViewIndex: Int?
+        
+        for (p,playerView) in enumerate(playerViews) {
+            
+            if let name = playerView.playerName.text, peerName = peerID.displayName where name == peerName {
+                
+                foundPlayerViewIndex = p
+                scene?.playerLeft(name)
+            }
+            
+            
+        }
+        
+        
+        //remove all playerViews
+        for playerView in playerViews { playerView.removeFromSuperview() }
+        
+        if let foundPlayerViewIndex = foundPlayerViewIndex {
+            
+            playerViews.removeAtIndex(foundPlayerViewIndex)
+        }
+        //remove stats area and update stats layou if stats area was not at end
+        // remove player sprite node (possibly by exploding them)
+            layoutPlayerStats()
         
     }
     
-    func playerLeft() {
-        //remove stats area and update stats layou if stats area was not at end
-        // remove player sprite node (possibly by exploding them)
+    func layoutPlayerStats () {
+        
+        let padding: CGFloat = 20
+        let maxPlayers: CGFloat = 8
+        
+        let playerStatsWidth = (view.frame.width - (padding * (maxPlayers + 1))) / maxPlayers
+        
+        
+        for (p,playerView) in enumerate(playerViews) {
+            
+            view.addSubview(playerView)
+            
+            let x = (playerStatsWidth + padding) * CGFloat(p) + padding
+            
+            playerView.frame = CGRectMake(x, padding, playerStatsWidth, 300)
+            
+        }
     }
     
     // player movements functions
